@@ -1,0 +1,24 @@
+version: 4.2.29
+session: 680c6c0252f99ae371c6ef8b
+steps:
+  - prompt: Click on the Gmail logo or link.
+    commands:
+      - command: hover-image
+        description: multicolored M logo at the top left corner
+        action: click
+  - prompt: Assert that the Gmail homepage loads.
+    commands:
+      - command: assert
+        expect: >-
+          the Gmail homepage with "Secure, smart, and easy to use email" is
+          visible
+  - prompt: Check that the main features are visible.
+    commands:
+      - command: assert
+        expect: >-
+          the Gmail homepage with "Create an account," "For work," and "Sign in"
+          is visible
+  - prompt: Assert no errors are present.
+    commands:
+      - command: assert
+        expect: no error messages are visible on the Gmail homepage
