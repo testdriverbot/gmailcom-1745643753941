@@ -1,0 +1,13 @@
+version: 4.2.29
+session: 680c6c033f8647e0819efb36
+steps:
+  - prompt: Navigate through the page with the tab key.
+    commands:
+      - command: press-keys
+        keys:
+          - tab
+  - prompt: Navigate through the page with the tab key.
+    commands:
+      - command: press-keys
+        keys:
+          - tab
