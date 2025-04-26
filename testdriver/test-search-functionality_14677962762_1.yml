@@ -1,0 +1,18 @@
+version: 4.2.29
+session: 680c6c0a3f8647e0819efb3e
+steps:
+  - prompt: Click on the search icon or press enter.
+    commands:
+      - command: press-keys
+        keys:
+          - enter
+  - prompt: Assert that search results are displayed.
+    commands:
+      - command: assert
+        expect: search results are displayed
+  - prompt: Verify relevant results are shown.
+    commands:
+      - command: assert
+        expect: >-
+          a term used to evaluate the effectiveness of a search engine or search
+          functionality within a website or application
