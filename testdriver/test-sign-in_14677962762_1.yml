@@ -1,0 +1,13 @@
+version: 4.2.29
+session: 680c6c0052f99ae371c6ef89
+steps:
+  - prompt: Click on the "Sign in" button.
+    commands:
+      - command: hover-text
+        text: Sign in
+        description: sign in button in the top right corner of the webpage
+        action: click
+  - prompt: Assert that the login form is displayed.
+    commands:
+      - command: assert
+        expect: the login form with "Email or phone" input is displayed
