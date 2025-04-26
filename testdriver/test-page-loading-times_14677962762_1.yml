@@ -1,0 +1,32 @@
+version: 4.2.29
+session: 680c6c0d3f8647e0819efb40
+steps:
+  - prompt: Refresh the page.
+    commands:
+      - command: press-keys
+        keys:
+          - f5
+  - prompt: Measure the time it takes to load.
+    commands:
+      - command: press-keys
+        keys:
+          - f12
+  - prompt: Measure the time it takes to load.
+    commands:
+      - command: press-keys
+        keys:
+          - f5
+  - prompt: Measure the time it takes to load.
+    commands:
+      - command: hover-text
+        text: Network
+        description: network tab in the developer tools
+        action: click
+  - prompt: Assert that the page loading time is within acceptable limits.
+    commands:
+      - command: assert
+        expect: the page loading time is within acceptable limits
+  - prompt: Check for any loading errors.
+    commands:
+      - command: assert
+        expect: there are no loading errors in the network tab
