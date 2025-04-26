@@ -1,0 +1,57 @@
+version: 4.2.29
+session: 680c6c083f8647e0819efb3a
+steps:
+  - prompt: Scroll to the footer of the page.
+    commands:
+      - command: scroll
+        direction: down
+        method: keyboard
+        amount: 300
+  - prompt: Scroll to the footer of the page.
+    commands:
+      - command: scroll
+        direction: down
+        method: keyboard
+        amount: 300
+  - prompt: Scroll to the footer of the page.
+    commands:
+      - command: scroll
+        direction: down
+        method: keyboard
+        amount: 300
+  - prompt: Scroll to the footer of the page.
+    commands:
+      - command: scroll
+        direction: down
+        method: keyboard
+        amount: 300
+  - prompt: Click on "Privacy" and "Terms" links.
+    commands:
+      - command: scroll-until-text
+        text: Privacy
+        direction: down
+        method: keyboard
+      - command: hover-text
+        text: Privacy
+        description: link at the bottom of the page
+        action: click
+      - command: hover-text
+        text: Terms
+        description: link at the bottom of the page
+        action: click
+  - prompt: Assert that each policy page is displayed correctly.
+    commands:
+      - command: assert
+        expect: the "Privacy Policy" tab is highlighted
+      - command: assert
+        expect: the "Key terms" section is visible
+  - prompt: Assert that each policy page is displayed correctly.
+    commands:
+      - command: assert
+        expect: the "Privacy Policy" tab is highlighted
+      - command: assert
+        expect: the "Key terms" section is visible
+  - prompt: Ensure no errors are present on these pages.
+    commands:
+      - command: assert
+        expect: no "404" or "Error" messages are visible
