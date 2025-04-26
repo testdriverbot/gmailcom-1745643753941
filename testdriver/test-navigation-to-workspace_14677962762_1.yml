@@ -1,0 +1,37 @@
+version: 4.2.29
+session: 680c6bf652f99ae371c6ef87
+steps:
+  - prompt: Click on the "For work" link.
+    commands:
+      - command: hover-text
+        text: For work
+        description: link next to "Create an account" button
+        action: click
+  - prompt: Assert that the Google Workspace page is displayed.
+    commands:
+      - command: assert
+        expect: >-
+          the Google Workspace page is displayed with the text "Google
+          Workspace"
+  - prompt: Ensure that product features and pricing are visible.
+    commands:
+      - command: scroll-until-text
+        text: Compare plans
+        direction: down
+        method: keyboard
+  - prompt: Ensure that product features and pricing are visible.
+    commands:
+      - command: hover-text
+        text: Compare plans
+        description: link at the bottom of the page
+        action: click
+  - prompt: Ensure that product features and pricing are visible.
+    commands:
+      - command: hover-text
+        text: Compare plans
+        description: link at the bottom of the page
+        action: click
+  - prompt: Assert no errors are present.
+    commands:
+      - command: assert
+        expect: no error messages like "Error", "404", or "Not Found" are visible
